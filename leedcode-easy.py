@@ -1,4 +1,7 @@
 #125. Valid Palindrome
+from ast import List
+
+
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         s = s.lower()
@@ -17,4 +20,18 @@ class Solution:
             if char not in s:
                 return char
             if s.count(char)< t.count(char):
-                return char
+                return char  
+            
+            
+#3300. Minimum Element After Replacement With Digit Sum
+class Solution:
+    def minElement(self, nums: List[int]) -> int:
+        counter = 0
+        sums = []
+        for num in nums:
+            str_num = str(num)
+            for i in str_num:
+                counter+=int(i)
+            sums.append(counter)
+            counter = 0
+        return min(sums)
