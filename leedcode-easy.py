@@ -1,5 +1,6 @@
 #125. Valid Palindrome
 from ast import List
+import string
 
 
 class Solution:
@@ -35,3 +36,22 @@ class Solution:
             sums.append(counter)
             counter = 0
         return min(sums)
+    
+# 1945. Sum of Digits of String After Convert
+class Solution:
+    def getLucky(self, s: str, k: int) -> int:
+        alph=[]
+        bets = string.ascii_lowercase
+        string_digits=''
+        for i in s:
+            string_digits += str(bets.find(i)+1)
+        for i in string_digits:
+            alph.append(int(i))
+        summation = sum(alph)
+        alph_two = []
+        for i in range(k-1):
+            for dig in str(summation):
+                alph_two.append(int(dig))
+            summation = sum(alph_two)
+            alph_two=[]
+        return summation
