@@ -1,5 +1,5 @@
 #125. Valid Palindrome
-from ast import List
+from ast import Add, List
 import string
 
 
@@ -55,3 +55,14 @@ class Solution:
             summation = sum(alph_two)
             alph_two=[]
         return summation
+    
+#258. Add Digits
+class Solution:
+    def addDigits(self, num: int) -> int:
+        while(num>9):
+            arr = []
+            for i in str(num):
+                arr.append(int(i))
+            num = sum(arr)
+        return num
+        
