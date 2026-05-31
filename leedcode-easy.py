@@ -65,4 +65,16 @@ class Solution:
                 arr.append(int(i))
             num = sum(arr)
         return num
-        
+
+#2180. Count Integers With Even Digit Sum
+class Solution:
+    def countEven(self, num: int) -> int:
+        count = 0
+        digits=[]
+        for i in range(1,num+1):
+            for j in str(i):
+                digits.append(int(j))
+            if sum(digits)%2==0:
+                count+=1
+            digits=[]
+        return count
