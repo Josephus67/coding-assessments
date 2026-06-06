@@ -88,3 +88,17 @@ class Solution:
             rightsum=sum(nums[i+1:])
             answer.append(abs(leftsum-rightsum))
         return answer
+
+# 796. Rotate String
+class Solution:
+    def rotateString(self, s: str, goal: str) -> bool:
+        g_arr = []
+        for i in s:
+            g_arr.append(i)
+        for i in range(len(s)):
+            g_arr.append(g_arr[0])
+            del g_arr[0]
+            if ''.join(g_arr)==goal:
+                return True
+                break
+        return False
