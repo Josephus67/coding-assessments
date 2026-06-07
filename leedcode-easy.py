@@ -102,3 +102,12 @@ class Solution:
                 return True
                 break
         return False
+# 27. Remove Element
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        remove=[]
+        for i in nums:
+            if i!=val:
+                remove.append(i)
+        nums[:]=remove
+        return len(nums)
