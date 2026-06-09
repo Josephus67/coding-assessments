@@ -14,3 +14,8 @@ class Solution:
         #if mass+sum(asteroids)-max(asteroids)>=max(asteroids):
          #   return True
         #return False
+
+# 3689. Maximum Total Subarray Value I     
+class Solution:
+    def maxTotalValue(self, nums: List[int], k: int) -> int:
+        return (max(nums)-min(nums))*k
