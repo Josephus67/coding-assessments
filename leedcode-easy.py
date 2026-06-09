@@ -111,3 +111,13 @@ class Solution:
                 remove.append(i)
         nums[:]=remove
         return len(nums)
+# 1394. Find Lucky Integer in an Array
+class Solution:
+    def findLucky(self, arr: List[int]) -> int:
+        ak=[]
+        for i in arr:
+            if arr.count(i)==i:
+                ak.append(i)
+        if len(ak)==0:
+            return -1
+        return max(ak)            
