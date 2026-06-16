@@ -37,3 +37,13 @@ class Solution:
             elif i=='%':
                 result.reverse()
         return ''.join(result)
+    
+# 686. Repeated String Match
+class Solution:
+    def repeatedStringMatch(self, a: str, b: str) -> int:
+        catch = (len(b) + len(a) - 1) // len(a) 
+        for i in range(catch,catch+3):
+            look = a*i
+            if b in look:
+                return i
+        return -1
