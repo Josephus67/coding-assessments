@@ -157,3 +157,9 @@ class Solution:
         if n==0 or n==1:
             return n
         return self.fib(n-1)+self.fib(n-2)
+    
+# 367. Valid Perfect Square
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        if num<1: return False
+        return int(num**0.5)*int(num**0.5)==num
