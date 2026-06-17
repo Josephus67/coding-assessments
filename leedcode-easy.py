@@ -163,3 +163,10 @@ class Solution:
     def isPerfectSquare(self, num: int) -> bool:
         if num<1: return False
         return int(num**0.5)*int(num**0.5)==num
+    
+import pandas as pd
+
+# 627. Swap Sex of Employees
+def swap_salary(salary: pd.DataFrame) -> pd.DataFrame:
+    salary['sex']=salary['sex'].map({"f":"m","m":"f"})
+    return salary
