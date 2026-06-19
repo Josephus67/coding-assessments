@@ -170,3 +170,14 @@ import pandas as pd
 def swap_salary(salary: pd.DataFrame) -> pd.DataFrame:
     salary['sex']=salary['sex'].map({"f":"m","m":"f"})
     return salary
+# 1732. Find the Highest Altitude
+class Solution:
+    def largestAltitude(self, gain: List[int]) -> int:
+        sums=[]
+        top=0
+        for i in range(len(gain)):
+            top+=gain[i]
+            sums.append(top)
+        if max(sums)<0:
+            return 0
+        return max(sums)
