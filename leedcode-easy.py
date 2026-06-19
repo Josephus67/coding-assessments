@@ -216,3 +216,15 @@ class Solution:
             if i not in nums1_set:
                 commons2.append(i)
         return [commons1,commons2]
+    
+
+ 
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        commons=[]
+        for i in nums1:
+            if i in nums2:
+                commons.append(i)
+                nums2.remove(i)
+        
+        return commons
