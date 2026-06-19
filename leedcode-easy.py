@@ -181,3 +181,14 @@ class Solution:
         if max(sums)<0:
             return 0
         return max(sums)
+    
+# 2540. Minimum Common Value
+class Solution:
+    def getCommon(self, nums1: List[int], nums2: List[int]) -> int:
+        commons=[]
+        nums1_set=set(nums1)
+        nums2_set=set(nums2)
+        for i in nums1_set:
+            if i in nums2_set:
+                commons.append(i)
+        return min(commons) if commons else -1
