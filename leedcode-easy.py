@@ -192,3 +192,13 @@ class Solution:
             if i in nums2_set:
                 commons.append(i)
         return min(commons) if commons else -1
+ # 349. Intersection of Two Arrays   
+class Solution:
+    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        commons=[]
+        nums1_set=set(nums1)
+        nums2_set=set(nums2)
+        for i in nums1_set:
+            if i in nums2_set:
+                commons.append(i)
+        return commons
