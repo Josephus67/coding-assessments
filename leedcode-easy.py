@@ -218,7 +218,7 @@ class Solution:
         return [commons1,commons2]
     
 
- 
+ # 350. Intersection of Two Arrays II
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
         commons=[]
@@ -228,3 +228,11 @@ class Solution:
                 nums2.remove(i)
         
         return commons
+# 2553. Separate the Digits in an Array  
+class Solution:
+    def separateDigits(self, nums: List[int]) -> List[int]:
+        answer=[]
+        for i in nums:
+            for k in str(i):
+                answer.append(int(k))
+        return answer
