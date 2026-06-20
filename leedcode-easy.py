@@ -236,3 +236,15 @@ class Solution:
             for k in str(i):
                 answer.append(int(k))
         return answer
+# 2544. Alternating Digit Sum   
+class Solution:
+    def alternateDigitSum(self, n: int) -> int:
+        bingo=[]
+        count=0
+        string_value=str(n)
+        for i in range(len(string_value)):
+            if i%2==0:
+                count+=int(string_value[i])
+            else:
+                count-=int(string_value[i])
+        return count
