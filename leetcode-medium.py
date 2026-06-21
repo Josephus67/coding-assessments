@@ -58,3 +58,15 @@ class Solution:
         diff = abs(hour_angle - minute_angle)
         
         return min(diff, 360 - diff)
+
+
+# 1833. Maximum Ice Cream Bars
+class Solution:
+    def maxIceCream(self, costs: List[int], coins: int) -> int:
+        counter=0
+        cost_s=sorted(costs)
+        for i in cost_s:
+            if i<=coins:
+                counter+=1
+                coins-=i
+        return counter
