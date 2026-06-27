@@ -69,4 +69,20 @@ class Solution:
             if i<=coins:
                 counter+=1
                 coins-=i
-        return counter
+        return 
+# 20. Valid Parentheses
+class Solution:
+    def isValid(self, s: str) -> bool:
+        bracket_map = {")": "(", "}": "{", "]": "["}
+        stack = []
+        
+        for char in s:
+            if char in bracket_map:
+                top_element = stack.pop() if stack else '#'
+                
+                if bracket_map[char] != top_element:
+                    return False
+            else:
+                stack.append(char)
+                
+        return not stack
