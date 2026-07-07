@@ -268,3 +268,16 @@ class Solution:
             if i in word:
                 count+=1
         return count
+    
+# 3754. Concatenate Non-Zero Digits and Multiply by Sum I   
+class Solution:
+    def sumAndMultiply(self, n: int) -> int:
+        count=0
+        hey=[]
+        for i in str(n):
+            count+=int(i)
+            if i!='0':
+                hey.append(i)
+        
+        joined_str = ''.join(hey)
+        return count * int(joined_str) if joined_str else 0
