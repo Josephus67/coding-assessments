@@ -281,3 +281,15 @@ class Solution:
         
         joined_str = ''.join(hey)
         return count * int(joined_str) if joined_str else 0
+
+# 476. Number Complement
+class Solution:
+    def findComplement(self, num: int) -> int:
+        comp=[]
+        for i in list(str(bin(num))[2:]):
+            if i=='0':
+                comp.append('1')
+            else:
+                comp.append('0')
+        comp_str = ''.join(comp)
+        return int(comp_str,2)
