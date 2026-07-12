@@ -293,3 +293,18 @@ class Solution:
                 comp.append('0')
         comp_str = ''.join(comp)
         return int(comp_str,2)
+
+# 1331. Rank Transform of an Array
+class Solution:
+    def arrayRankTransform(self, arr: List[int]) -> List[int]:
+        ranks = []
+        s_arr = sorted(set(arr))
+
+        rank = {}
+        for i in range(len(s_arr)):
+            rank[s_arr[i]] = i + 1
+
+        for num in arr:
+            ranks.append(rank[num])
+
+        return ranks
